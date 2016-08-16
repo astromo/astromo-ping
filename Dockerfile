@@ -8,5 +8,7 @@ ADD . .
 HEALTHCHECK --timeout=3s --retries=2 \
   CMD curl -f http://localhost:3000/ping || exit 1
 
+RUN npm install
+
 EXPOSE 3000
 CMD ["node", "index.js"]
